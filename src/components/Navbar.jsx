@@ -48,7 +48,7 @@ const Navbar = () => {
                     ? "rounded-full bg-white px-6 py-1 hover:bg-[#65E4A3]"
                     : "rounded-full px-6 py-1 text-white hover:bg-[#3D5973]"
                 }`}
-                href={`#${navlink.title}`}
+                href={`#${navlink.id}`}
               >
                 {navlink.title}
               </a>
