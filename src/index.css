@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Open Sans;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-custom-background {
+  background-image: url("/src/assets/bgemail.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.marquee-w {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  overflow: hidden;
+}
+.marquee {
+  position: absolute;
+  display: block;
+  margin: auto auto;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 100%;
+  height: 100%;
+}
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 100%;
+  animation: marquee 9s linear infinite;
+}
+.marquee2 span {
+  animation-delay: 1.5s;
+}
+.marquee3 span {
+  animation-delay: 3s;
+}
+.marquee4 span {
+  animation-delay: 4.5s;
+}
+.marquee5 span {
+  animation-delay: 6s;
+}
+.marquee6 span {
+  animation-delay: 7.5s;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+    opacity: 0.4; /* Set default opacity to 60% */
+  }
+  50% {
+    opacity: 1; /* Set opacity to 100% in the middle of animation */
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0.4; /* Set default opacity to 60% */
+  }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 480px) {
+  .marquee span {
+    animation: marquee 6s linear infinite;
+  }
+  .marquee2 span {
+    animation-delay: 1.5s;
+  }
+  .marquee3 span {
+    animation-delay: 3s;
+  }
+  .marquee4 span {
+    animation-delay: 4.5s;
+  }
+  .marquee5 span {
+    display: none;
+    animation-delay: 6s;
+  }
+  .marquee6 span {
+    display: none;
+    animation-delay: 7.5s;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .marquee span {
+    animation: marquee 6s linear infinite;
+  }
+  .marquee2 span {
+    animation-delay: 1.5s;
+  }
+  .marquee3 span {
+    animation-delay: 3s;
+  }
+  .marquee4 span {
+    animation-delay: 4.5s;
+  }
+  .marquee5 span {
+    display: none;
+    animation-delay: 6s;
+  }
+  .marquee6 span {
+    display: none;
+    animation-delay: 7.5s;
+  }
+}
+@media screen and (max-width: 768px) {
+  .marquee span {
+    animation: marquee 6s linear infinite;
+  }
+  .marquee2 span {
+    animation-delay: 1.5s;
+  }
+  .marquee3 span {
+    animation-delay: 3s;
+  }
+  .marquee4 span {
+    animation-delay: 4.5s;
+  }
+  .marquee5 span {
+    display: none;
+    animation-delay: 6s;
+  }
+  .marquee6 span {
+    display: none;
+    animation-delay: 7.5s;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .marquee span {
+    animation: marquee 8s linear infinite;
+  }
+  .marquee2 span {
+    animation-delay: 2s;
+  }
+  .marquee3 span {
+    animation-delay: 4s;
+  }
+  .marquee4 span {
+    animation-delay: 6s;
+  }
+  .marquee5 span {
+    display: none;
+    animation-delay: 6s;
+  }
+  .marquee6 span {
+    display: none;
+    animation-delay: 7.5s;
+  }
+}
