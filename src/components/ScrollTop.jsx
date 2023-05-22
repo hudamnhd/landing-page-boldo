@@ -29,7 +29,7 @@ const ScrollTop = () => {
     <div
       className={` ${
         !isVisible && "hidden"
-      } fixed bottom-5 right-5 cursor-pointer rounded-full bg-[#0A2640] p-3 opacity-90`}
+      } fixed bottom-3 right-3 cursor-pointer rounded-full bg-[#0A2640] p-2 opacity-90`}
       onClick={handleScrollTop}
     >
       <FaArrowUp className="text-white" />

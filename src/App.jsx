@@ -9,7 +9,7 @@ import {
   CTAFooter,
   ScrollTop,
 } from "./components";
-
+import Help from "./components/Help.jsx";
 const App = () => {
   return (
     <>
@@ -22,6 +22,7 @@ const App = () => {
       <Products />
       <CTAFooter />
       <ScrollTop />
+      <Help />
     </>
   );
 };

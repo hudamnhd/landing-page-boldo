@@ -38,7 +38,7 @@ const Navbar = () => {
         <div
           className={` ${
             !toggle ? "hidden" : "flex"
-          } absolute right-5 top-16 flex-col items-center space-y-3 rounded-[10px] bg-[#1C3D5B] p-5 font-semibold md:hidden`}
+          } sidebar absolute right-5 top-16 flex-col items-center space-y-3 rounded-[10px] bg-[#1C3D5B] p-5 font-semibold md:hidden`}
         >
           {navLinks.map((navlink) => (
             <div key={navlink.id}>
