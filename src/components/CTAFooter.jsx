@@ -36,13 +36,11 @@ const CTAFooter = () => {
         <div class="flex flex-row items-center justify-between ">
           {footerLinks.map((footerlink) => (
             <div className="flex  w-1/4 flex-col space-y-3 text-lg sm:mx-10 md:w-1/5">
-              <h4 href="" className="font-bold">
-                {footerlink.title}
-              </h4>
+              <h4 className="font-bold">{footerlink.title}</h4>
               {footerlink.links.map((link) => (
                 <div>
                   <a
-                    href="#"
+                    href="https://github.com/hudamnhd/landing-page-boldo"
                     className="group flex items-center text-gray-500 hover:text-black"
                   >
                     {link.name}{" "}

@@ -33,7 +33,7 @@ const ServicesGroupA = () => {
               <div>
                 <div>
                   <a
-                    href="#"
+                    href="https://github.com/hudamnhd/landing-page-boldo"
                     className="flex w-fit items-center space-x-5  border-b-2 border-gray-500 pb-1 font-semibold"
                   >
                     <span>Explore page</span>

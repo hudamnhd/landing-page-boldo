@@ -10,13 +10,13 @@ const Testimonials = () => {
           </h1>
           <div class="flex flex-row space-x-4 ">
             <a
-              href="#"
+              href="https://github.com/hudamnhd/landing-page-boldo"
               className="group rounded-full border-2 border-white bg-white p-4 hover:bg-[#1C3D5B]"
             >
               <FaArrowLeft className="text-xl group-hover:text-white" />
             </a>{" "}
             <a
-              href="#"
+              href="https://github.com/hudamnhd/landing-page-boldo"
               className="group rounded-full border-2 border-white bg-white p-4 hover:bg-[#1C3D5B]"
             >
               <FaArrowRight className=" text-xl group-hover:text-white" />
