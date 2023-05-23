@@ -7,7 +7,7 @@ import ServicesGroupC from "./ServicesGroupC";
 import Products from "./Products";
 import CTAFooter from "./CTAFooter";
 import ScrollTop from "./ScrollTop";
-
+import Help from "./Help";
 export {
   Navbar,
   Hero,
@@ -18,4 +18,5 @@ export {
   Products,
   CTAFooter,
   ScrollTop,
+  Help,
 };

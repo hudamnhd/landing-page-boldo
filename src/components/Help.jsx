@@ -24,14 +24,14 @@ const Help = () => {
       <div
         className={` ${
           toggle === false && "hidden"
-        } sidebar  fixed bottom-12 left-3 bg-slate-200 p-5 rounded-xl w-fit opacity-80 hover:opacity-100`}
+        } sidebar text-[12px] ss:text-[16px] fixed bottom-12 left-3 bg-slate-100 p-3 ss:p-5 rounded-xl w-fit`}
       >
         <p className="font-semibold">Github repo :</p>
         <a
           href="https://github.com/hudamnhd/landing-page-boldo"
           target="_blank"
           rel="noreferrer"
-          className="opacity-70 hover:opacity-100 "
+          className="opacity-70 hover:opacity-100  "
         >
           https://github.com/hudamnhd/landing-page-boldo
         </a>

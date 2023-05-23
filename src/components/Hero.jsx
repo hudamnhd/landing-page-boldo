@@ -1,5 +1,6 @@
 import { hero } from "../assets";
 import Clients from "./Clients.jsx";
+
 const Hero = () => {
   return (
     <div className="bg-[#0A2640] px-5 pb-7 md:px-14 md:py-7 md:pb-14">

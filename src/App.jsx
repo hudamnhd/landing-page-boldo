@@ -8,8 +8,9 @@ import {
   Products,
   CTAFooter,
   ScrollTop,
+  Help,
 } from "./components";
-import Help from "./components/Help.jsx";
+
 const App = () => {
   return (
     <>
