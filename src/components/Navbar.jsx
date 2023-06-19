@@ -12,7 +12,7 @@ const Navbar = () => {
         <h1 className="text-4xl font-bold text-white">Boldo</h1>
       </div>
       {/* navigasi */}
-      <div className="space-x hidden md:flex">
+      <div className="space-x-1 hidden md:flex">
         {navLinks.map((navlink) => (
           <div key={navlink.id}>
             <a

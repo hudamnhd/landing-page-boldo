@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ItemCarousel from "./ItemCarousel";
 
 const Testimonials = () => {

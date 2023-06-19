@@ -1,9 +1,11 @@
+import { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { feedback } from "../constants";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const ItemCarousel = () => {
+  const [isMouseOver, setIsMouseOver] = useState(false);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -26,7 +28,7 @@ const ItemCarousel = () => {
 
   const CustomButtonGroupAsArrows = ({ next, previous }) => {
     return (
-      <div>
+      <div className={`${isMouseOver ? null : "opacity-0"} `}>
         <button
           className="shadow-md shadow-slate-500 absolute -right-6 top-1/2 transform -translate-y-1/2 hover:bg-[#1C3D5B] hover:text-white border-2 border-white bg-slate-50 text-[#1C3D5B]   rounded-full text-xl p-4"
           onClick={next}
@@ -44,7 +46,11 @@ const ItemCarousel = () => {
   };
 
   return (
-    <div className="relative">
+    <div
+      className="relative"
+      onMouseEnter={() => setIsMouseOver(true)}
+      onMouseLeave={() => setIsMouseOver(false)}
+    >
       <Carousel
         infinite
         arrows={false}
