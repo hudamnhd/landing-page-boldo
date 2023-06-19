@@ -1,6 +1,7 @@
 # Boldo Landing Page
 
-This is a simple landing page  built with React.js and Tailwind CSS.
+This is a simple landing page built with React.js and Tailwind CSS.
+
 ## Features
 
 - Responsive Design
@@ -9,7 +10,6 @@ This is a simple landing page  built with React.js and Tailwind CSS.
 
 - React.js
 - Tailwind CSS
-
 
 #### Design from : https://www.figma.com/community/file/1081611224529759785
 
@@ -24,15 +24,20 @@ This is a simple landing page  built with React.js and Tailwind CSS.
    ```bash
    git clone https://github.com/hudamnhd/landing-page-boldo.git
 
+   ```
+
 2. Navigate to the project directory:
 
    ```bash
    cd landing-page-boldo
-   
+
+   ```
+
 3. Install the dependencies:
 
    ```bash
    npm install
+   ```
 
 ## Usage
 
@@ -40,4 +45,5 @@ This is a simple landing page  built with React.js and Tailwind CSS.
 
    ```bash
    npm run start
-   
+
+   ```
