@@ -17,7 +17,7 @@ const ServicesGroupA = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="group flex flex-col items-start space-y-5 rounded-xl p-10 text-left hover:bg-gray-100"
+              className="group flex flex-col items-start space-y-5 rounded-xl p-10 text-left hover:scale-105 duration-300"
             >
               <img
                 src={service.img}

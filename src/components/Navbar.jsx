@@ -18,8 +18,8 @@ const Navbar = () => {
             <a
               className={`${
                 navlink.title === "Login"
-                  ? "rounded-full bg-white px-6 py-2 hover:bg-[#65E4A3]"
-                  : "rounded-full px-6 py-2 text-white hover:bg-[#3D5973]"
+                  ? "rounded-full bg-white px-6 py-2 hover:bg-[#65E4A3] duration-300"
+                  : "rounded-full px-6 py-2 text-white hover:bg-[#3D5973] duration-300"
               }`}
               href={`#${navlink.id}`}
             >

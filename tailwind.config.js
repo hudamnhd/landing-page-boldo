@@ -2,7 +2,21 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        spin: {
+          from: {
+            transform: "rotate(0deg)",
+          },
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
+      animation: {
+        spin: "spin 1s linear infinite",
+      },
+    },
     screens: {
       xs: "480px",
       ss: "620px",
@@ -12,5 +26,6 @@ module.exports = {
       xl: "1700px",
     },
   },
+  darkMode: "class",
   plugins: [],
 };
