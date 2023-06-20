@@ -10,7 +10,7 @@ const Products = () => {
       </div>
       <div
         id="product"
-        className="container mx-auto  mb-8 flex flex-col  flex-wrap justify-center px-5 drop-shadow-md  sm:mb-10 sm:flex-row"
+        className="container mx-auto  mb-8 flex flex-col  flex-wrap justify-center px-5 sm:mb-10 sm:flex-row"
       >
         {products.map((product) => (
           <div

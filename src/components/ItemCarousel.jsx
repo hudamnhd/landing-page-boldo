@@ -17,11 +17,11 @@ const ItemCarousel = () => {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 772 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 772, min: 0 },
       items: 1,
     },
   };
@@ -30,7 +30,7 @@ const ItemCarousel = () => {
     return (
       <div className={`${isMouseOver ? null : "opacity-0"} `}>
         <button
-          className="shadow-md shadow-slate-500 absolute -right-6 top-1/2 transform -translate-y-1/2 hover:bg-[#1C3D5B] hover:text-white border-2 border-white bg-slate-50 text-[#1C3D5B]   rounded-full text-xl p-4"
+          className="shadow-md shadow-slate-500 absolute -right-6 top-1/2 transform -translate-y-1/2 hover:bg-[#1C3D5B] hover:text-white border-2 border-white bg-slate-50 text-[#1C3D5B]  rounded-full text-xl p-4"
           onClick={next}
         >
           <FaArrowRight />
@@ -52,8 +52,9 @@ const ItemCarousel = () => {
       onMouseLeave={() => setIsMouseOver(false)}
     >
       <Carousel
-        infinite
+        shouldResetAutoplay
         arrows={false}
+        infinite
         autoPlay={true}
         autoPlaySpeed={3000}
         responsive={responsive}
@@ -63,14 +64,16 @@ const ItemCarousel = () => {
         {feedback.map((feed) => (
           <div
             key={feed.name}
-            className="flex flex-col justify-between space-y-10 rounded-xl bg-white p-8 m-3 h-80 duration-300 hover:scale-105 bg-slate-100"
+            className="flex flex-col justify-between space-y-10 rounded-xl bg-white p-8 xs:h-[320px] w-fit duration-300 scale-90 hover:scale-100"
           >
-            <p className="text-2xl">"{feed.content}"</p>
-            <div className="flex items-center space-x-5">
-              <img src={feed.img} alt="" />
-              <div className="space-y-2">
-                <h4 className="text-[16px] font-bold">{feed.name}</h4>
-                <p className="text-[14px]">{feed.title}</p>
+            <p className="text-lg ss:text-xl md:text-2xl">"{feed.content}"</p>
+            <div className="flex items-center space-x-3 xs:space-x-5">
+              <img className="h-12 xs:h-14" src={feed.img} alt={feed.name} />
+              <div className="xs:space-y-2">
+                <h4 className="text-sm xs:text-[16px] font-bold">
+                  {feed.name}
+                </h4>
+                <p className="text-xs xs:text-[14px]">{feed.title}</p>
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ const ServicesGroupA = () => {
         </div>
         <div
           id="services"
-          className="container mx-auto mt-5 flex  flex-col flex-wrap items-center justify-center rounded-xl px-5 drop-shadow-md sm:mt-10 sm:flex-row"
+          className="container mx-auto mt-5 flex  flex-col flex-wrap items-center justify-center rounded-xl px-5 sm:mt-10 sm:flex-row"
         >
           {services.map((service) => (
             <div
