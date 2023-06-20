@@ -13,7 +13,7 @@ import {
 
 const App = () => {
   return (
-    <>
+    <div className="xl:max-w-[1280px] mx-auto w-full bg-white relative">
       <Navbar />
       <Hero />
       <ServicesGroupA />
@@ -24,7 +24,7 @@ const App = () => {
       <CTAFooter />
       <ScrollTop />
       <Help />
-    </>
+    </div>
   );
 };
 

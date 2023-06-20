@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  @apply bg-slate-200;
+}
+
 .bg-custom-background {
   background-image: url("/src/assets/bgemail.png");
   background-size: cover;
