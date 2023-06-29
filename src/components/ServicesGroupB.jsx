@@ -6,11 +6,11 @@ const ServicesGroupB = () => {
       {servicesGroupB.map((service, index) => (
         <div
           key={service.id}
-          className={`  mb-24 flex flex-col justify-center space-x-10 ${
+          className={`mb-24 flex justify-between  ${
             index === 1 ? "md:flex-row-reverse" : "md:flex-row"
           } `}
         >
-          <div className="flex justify-center md:w-1/2">
+          <div className="">
             <img
               src={service.img}
               className="hover:scale-105 duration-300"

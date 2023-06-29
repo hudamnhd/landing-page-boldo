@@ -28,15 +28,15 @@ const ItemCarousel = () => {
 
   const CustomButtonGroupAsArrows = ({ next, previous }) => {
     return (
-      <div className={`${isMouseOver ? null : "opacity-0"} `}>
+      <div className={`${isMouseOver ? null : "opacity-0"} pb-4`}>
         <button
-          className="shadow-md shadow-slate-500 absolute -right-6 top-1/2 transform -translate-y-1/2 hover:bg-[#1C3D5B] hover:text-white border-2 border-white bg-slate-50 text-[#1C3D5B]  rounded-full text-xl p-4"
+          className="shadow-md shadow-slate-500 absolute -right-7 top-1/2 transform -translate-y-1/2 hover:bg-[#1C3D5B] hover:text-white border-2 border-white bg-slate-50 text-[#1C3D5B]  rounded-full text-xl p-4"
           onClick={next}
         >
           <FaArrowRight />
         </button>
         <button
-          className="shadow-sm shadow-slate-500 absolute -left-6 top-1/2 transform -translate-y-1/2 hover:bg-[#1C3D5B] hover:text-white border-2 border-white bg-slate-50 text-[#1C3D5B] rounded-full p-4 text-xl"
+          className="shadow-sm shadow-slate-500 absolute -left-7 top-1/2 transform -translate-y-1/2 hover:bg-[#1C3D5B] hover:text-white border-2 border-white bg-slate-50 text-[#1C3D5B] rounded-full p-4 text-xl"
           onClick={previous}
         >
           <FaArrowLeft />
@@ -64,7 +64,7 @@ const ItemCarousel = () => {
         {feedback.map((feed) => (
           <div
             key={feed.name}
-            className="flex flex-col justify-between space-y-10 rounded-xl bg-white p-8 xs:h-[320px] w-fit duration-300 scale-90 hover:scale-100"
+            className="flex flex-col justify-between space-y-10 rounded-xl bg-white p-8 mx-2 xs:h-[320px] w-fit duration-300 hover:scale-100"
           >
             <p className="text-lg ss:text-xl md:text-2xl">"{feed.content}"</p>
             <div className="flex items-center space-x-3 xs:space-x-5">
