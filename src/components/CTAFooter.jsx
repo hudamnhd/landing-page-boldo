@@ -5,22 +5,22 @@ const CTAFooter = () => {
   return (
     <section id="about">
       <div className="bg-custom-background container mx-auto rounded-lg bg-[#0A2640]">
-        <div className="mx-auto space-y-4 px-5 py-10 md:w-2/3 md:space-y-8 md:py-16">
-          <h1 className="text-center text-[28px] leading-[38px] text-white sm:leading-[72px] md:text-[48px] ">
+        <div className="flex flex-col items-center space-y-4 px-5 py-10 md:space-y-8 md:py-16">
+          <h1 className="md:max-w-[70%] text-center text-[28px] leading-[38px] text-white sm:text-[35px] sm:leading-[50px] md:leading-[72px] md:text-[48px] ">
             An enterprise template to ramp up your company website
           </h1>
-          <div className="flex flex-col justify-center space-x-0 space-y-2 md:flex-row md:space-x-3 md:space-y-0 ">
+          <form className="flex justify-center items-center space-x-2 w-full">
             <input
               type="email"
               name="email"
               autoComplete="off"
               placeholder="Your email addres"
-              className="rounded-full px-6 py-2 text-center text-lg focus:outline-none sm:text-left"
+              className="rounded-full px-6 py-2 focus:outline-none text-sm sm:text-base md:text-lg text-left"
             />
-            <button className="rounded-full bg-[#65E4A3] px-8 py-2 font-semibold  hover:bg-[#4CCB8A] ">
+            <button className="rounded-full bg-[#65E4A3] px-6 py-2 text-sm sm:text-base md:text-lg font-medium hover:bg-[#4CCB8A] ">
               Start Now
             </button>
-          </div>
+          </form>
         </div>
       </div>
       <footer className="container mx-auto mb-1 mt-10 flex flex-col space-y-5 px-5 pb-5 sm:mt-20 sm:justify-between sm:px-10 md:flex-row md:space-x-12 md:space-y-0">
