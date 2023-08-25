@@ -16,14 +16,14 @@ import prod03 from "./prod03.png";
 import person01 from "./person01.png";
 import person02 from "./person02.png";
 import person03 from "./person03.png";
-import logoGreen from "./logo-green.png";
+import logoGreen from "./logo-green.svg";
 import hero from "./hero-graphics.svg";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import bghero from "./bghero.png";
 export {
   boldo,
-boldo02,
+  boldo02,
   presto,
   services01,
   services02,
@@ -37,12 +37,12 @@ boldo02,
   prod01,
   prod02,
   prod03,
-person01,
-person02,
-person03,
+  person01,
+  person02,
+  person03,
   logoGreen,
   hero,
   menu,
   close,
-bghero,
+  bghero,
 };

@@ -6,6 +6,7 @@
 
 * {
   font-family: Open Sans;
+  box-sizing: border-box;
 }
 
 html {
@@ -36,151 +37,89 @@ body {
   }
 }
 
-.marquee-w {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 40px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-  overflow: hidden;
-}
-.marquee {
-  position: absolute;
-  display: block;
-  margin: auto auto;
-  white-space: nowrap;
-  overflow: hidden;
-  min-width: 100%;
-  height: 100%;
-}
-.marquee span {
-  display: inline-block;
-  padding-left: 100%;
-  text-align: center;
-  white-space: nowrap;
-  min-width: 100%;
-  animation: marquee 9s linear infinite;
-}
-.marquee2 span {
-  animation-delay: 1.5s;
-}
-.marquee3 span {
-  animation-delay: 3s;
-}
-.marquee4 span {
-  animation-delay: 4.5s;
-}
-.marquee5 span {
-  animation-delay: 6s;
-}
-.marquee6 span {
-  animation-delay: 7.5s;
-}
-
-@keyframes marquee {
+@keyframes scroll {
   0% {
     transform: translateX(0);
-    opacity: 0.4; /* Set default opacity to 60% */
-  }
-  50% {
-    opacity: 1; /* Set opacity to 100% in the middle of animation */
   }
   100% {
-    transform: translateX(-100%);
-    opacity: 0.4; /* Set default opacity to 60% */
+    transform: translateX(calc(-250px * 7));
   }
 }
 
-/* Responsive styles */
-@media screen and (max-width: 480px) {
-  .marquee span {
-    animation: marquee 6s linear infinite;
-  }
-  .marquee2 span {
-    animation-delay: 1.5s;
-  }
-  .marquee3 span {
-    animation-delay: 3s;
-  }
-  .marquee4 span {
-    animation-delay: 4.5s;
-  }
-  .marquee5 span {
-    display: none;
-    animation-delay: 6s;
-  }
-  .marquee6 span {
-    display: none;
-    animation-delay: 7.5s;
-  }
+.slider {
+  background: transparent;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 45px;
+  margin-top: 50px;
+  overflow: hidden;
+  position: relative;
 }
 
-@media screen and (max-width: 620px) {
-  .marquee span {
-    animation: marquee 6s linear infinite;
-  }
-  .marquee2 span {
-    animation-delay: 1.5s;
-  }
-  .marquee3 span {
-    animation-delay: 3s;
-  }
-  .marquee4 span {
-    animation-delay: 4.5s;
-  }
-  .marquee5 span {
-    display: none;
-    animation-delay: 6s;
-  }
-  .marquee6 span {
-    display: none;
-    animation-delay: 7.5s;
-  }
+.slider::before,
+.slider::after {
+  background: linear-gradient(
+    to right,
+    #0a2640 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: "";
+  height: 45px;
+  position: absolute;
+  width: 400px;
+  z-index: 2;
 }
+
 @media screen and (max-width: 768px) {
-  .marquee span {
-    animation: marquee 6s linear infinite;
-  }
-  .marquee2 span {
-    animation-delay: 1.5s;
-  }
-  .marquee3 span {
-    animation-delay: 3s;
-  }
-  .marquee4 span {
-    animation-delay: 4.5s;
-  }
-  .marquee5 span {
-    display: none;
-    animation-delay: 6s;
-  }
-  .marquee6 span {
-    display: none;
-    animation-delay: 7.5s;
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(
+      to right,
+      #0a2640 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 45px;
+    position: absolute;
+    width: 250px;
+    z-index: 2;
   }
 }
 
-@media screen and (max-width: 1060px) {
-  .marquee span {
-    animation: marquee 8s linear infinite;
+/* Smartphone */
+@media screen and (max-width: 480px) {
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(
+      to right,
+      #0a2640 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 45px;
+    position: absolute;
+    width: 100px;
+    z-index: 2;
   }
-  .marquee2 span {
-    animation-delay: 2s;
-  }
-  .marquee3 span {
-    animation-delay: 4s;
-  }
-  .marquee4 span {
-    animation-delay: 6s;
-  }
-  .marquee5 span {
-    display: none;
-    animation-delay: 6s;
-  }
-  .marquee6 span {
-    display: none;
-    animation-delay: 7.5s;
-  }
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
 }

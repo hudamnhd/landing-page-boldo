@@ -18,7 +18,8 @@ import {
   prod03,
 } from "../assets";
 
-import { FaCheckCircle, FaThermometer, FaSun, FaEye } from "react-icons/fa";
+import { FaThermometer, FaSun, FaEye } from "react-icons/fa";
+import { HiCheck } from "react-icons/hi";
 export const navLinks = [
   {
     id: "services",
@@ -90,15 +91,15 @@ export const servicesGroupB = [
     link: "https://boldo.com/services/",
     content: [
       {
-        icon: FaCheckCircle,
+        icon: HiCheck,
         content: "We connect our customers with the best.",
       },
       {
-        icon: FaCheckCircle,
+        icon: HiCheck,
         content: "Advisor success customer launch party.",
       },
       {
-        icon: FaCheckCircle,
+        icon: HiCheck,
         content: "Business-to-consumer long tail.",
       },
     ],
@@ -134,11 +135,11 @@ export const servicesGroupC = [
       "We connect our customers with the best, and help them keep up-and stay open.",
     content: [
       {
-        icon: FaCheckCircle,
+        icon: HiCheck,
         sub: "We connect our customers with the best?",
       },
       {
-        icon: FaCheckCircle,
+        icon: HiCheck,
         sub: "Android research & development rockstar?",
       },
     ],

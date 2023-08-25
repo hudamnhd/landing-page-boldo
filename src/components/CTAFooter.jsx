@@ -4,65 +4,87 @@ import { footerLinks } from "../constants";
 const CTAFooter = () => {
   return (
     <section id="about">
-      <div className="bg-custom-background container mx-auto rounded-lg bg-[#0A2640]">
-        <div className="flex flex-col items-center space-y-4 px-5 py-10 md:space-y-8 md:py-16">
-          <h1 className="md:max-w-[70%] text-center text-[28px] leading-[38px] text-white sm:text-[35px] sm:leading-[50px] md:leading-[72px] md:text-[48px] ">
+      <div className="bg-custom-background max-w-6xl  mx-auto md:rounded-lg bg-[#0A2640]">
+        <div className="flex flex-col items-center  px-5 py-10 sm:py-12">
+          <h1 className="text-slate-50 max-w-3xl mx-auto text-center leading-8 sm:leading-[50px] md:leading-[60px] tracking-tight text-gray-900 text-[28px] xs:text-[36px] sm:text-[40px] md:text-5xl mb-8">
             An enterprise template to ramp up your company website
           </h1>
-          <form className="flex justify-center items-center space-x-2 w-full">
-            <input
-              type="email"
-              name="email"
-              autoComplete="off"
-              placeholder="Your email addres"
-              className="rounded-full px-6 py-2 focus:outline-none text-sm sm:text-base md:text-lg text-left"
-            />
-            <button className="rounded-full bg-[#65E4A3] px-6 py-2 text-sm sm:text-base md:text-lg font-medium hover:bg-[#4CCB8A] ">
-              Start Now
-            </button>
-          </form>
+          <div className="max-w-lg w-full">
+            <div className="flex max-w-md mx-auto gap-x-1.5">
+              <label htmlFor="email-address" className="sr-only">
+                Email address
+              </label>
+              <input
+                id="email-address"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                className="bg-slate-50/90 min-w-0 flex-auto rounded-lg border-0  px-5 py-2 outline-none sm:text-sm sm:leading-6"
+                placeholder="Enter your email"
+              />
+              <button
+                type="submit"
+                className="flex-none rounded-lg bg-[#65E4A3] text-[#0A2640] px-4 sm:px-7 py-2 text-sm font-semibold  shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <footer className="container mx-auto mb-1 mt-10 flex flex-col space-y-5 px-5 pb-5 sm:mt-20 sm:justify-between sm:px-10 md:flex-row md:space-x-12 md:space-y-0">
-        <div className="space-y-4 md:w-[60%]">
-          <div className="flex items-center space-x-2">
-            <img src={boldo02} alt="Logo" className="h-7" />
-            <h1 className="text-4xl font-bold">Boldo</h1>
-          </div>
-          <p className="text-[16px] text-gray-500 ">
-            Social media validation business model canvas graphical user
-            interface launch party creative facebook iPad twitter.
-          </p>
-          <p className="text-[16px] text-gray-500">All rights reserved.</p>
-        </div>
-        <div className="flex flex-row items-center justify-between ">
-          {footerLinks.map((footerlink) => (
-            <div
-              key={footerlink.title}
-              className="flex  w-1/4 flex-col space-y-3 text-lg sm:mx-10 md:w-1/5"
-            >
-              <h4 className="font-bold">{footerlink.title}</h4>
-              {footerlink.links.map((link) => (
-                <div key={link.name}>
-                  <a
-                    href="https://github.com/hudamnhd/landing-page-boldo"
-                    className="group flex items-center text-gray-500 hover:text-black duration-300"
-                  >
-                    {link.name}{" "}
-                    <span
-                      className={` ${
-                        !link.info && "hidden"
-                      }  ml-2 rounded-full  bg-[#65E4A3] px-2 text-[13px] font-semibold text-black group-hover:bg-green-400`}
-                    >
-                      {link.info}
-                    </span>
-                  </a>
-                </div>
-              ))}
+
+      <section className="mt-10 md:mt-14 mx-auto max-w-6xl px-5 flex justify-center items-center flex-col">
+        <div className="flex justify-center items-start md:flex-row flex-col mb-6 w-full">
+          <div className="flex-1 flex flex-col justify-start mr-10">
+            <div className="flex items-center space-x-2">
+              <img src={boldo02} alt="Logo" className="h-[30px] sm:h-[35px]" />
+              <h1 className="text-3xl sm:text-4xl  font-bold">Boldo</h1>
             </div>
-          ))}
+
+            <p className="font-normal text-[#777777] sm:text-[18px] sm:leading-[27px] max-w-md mt-4 mb-4 md:mb-8">
+              Social media validation business model canvas graphical user
+              interface launch party creative facebook iPad twitter.
+            </p>
+
+            <p className="font-normal sm:text-lg text-[#777777] leading-[27px]">
+              All Rights Reserved.
+            </p>
+          </div>
+          <div
+            className="flex-[1.5] md:max-w-xl
+            flex flex-row justify-between flex-wrap md:mt-0 mt-6 w-full"
+          >
+            {footerLinks.map((footerlink) => (
+              <div
+                key={footerlink.title}
+                className="flex flex-col ss:my-0 my-4 min-w-[150px]"
+              >
+                <h4 className="font-semibold sm:text-[18px] sm:leading-[27px]">
+                  {footerlink.title}
+                </h4>
+                <ul className="list-none mt-2 xs:mt-3 sm:mt-4">
+                  {footerlink.links.map((link) => (
+                    <li
+                      ey={link.name}
+                      className="font-normal sm:text-[18px] sm:leading-[27px] text-[#777777]  hover:text-black cursor-pointer mb-2 xs:mb-3 sm:mb-4"
+                    >
+                      {link.name}{" "}
+                      <span
+                        className={` ${
+                          !link.info && "hidden"
+                        }  ml-2 rounded-lg  bg-[#65E4A3] px-2 py-1 text-sm font-semibold text-black group-hover:bg-green-400`}
+                      >
+                        {link.info}
+                      </span>{" "}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
-      </footer>
+      </section>
     </section>
   );
 };

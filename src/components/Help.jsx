@@ -8,7 +8,7 @@ const Help = () => {
     <div>
       <button
         onClick={() => setToggle(!toggle)}
-        className={`fixed bottom-3 left-3 bg-slate-300 opacity-30 rounded-full p-2 hover:opacity-100 ${
+        className={`z-50 fixed bottom-3 left-3 bg-slate-300 opacity-30 rounded-full p-2 hover:opacity-100 ${
           toggle === true && "opacity-80"
         } `}
       >
@@ -24,7 +24,7 @@ const Help = () => {
       <div
         className={` ${
           toggle === false && "hidden"
-        } sidebar text-[12px] ss:text-[16px] fixed bottom-12 left-3 bg-slate-100 p-3 ss:p-5 rounded-xl w-fit`}
+        } sidebar z-20 text-[12px] ss:text-[16px] fixed bottom-12 left-3 bg-slate-100 p-3 ss:p-5 rounded-xl w-fit`}
       >
         <p className="font-semibold">Github repo :</p>
         <a
@@ -36,7 +36,7 @@ const Help = () => {
           https://github.com/hudamnhd/landing-page-boldo
         </a>
 
-        <p className="font-semibold">Design :</p>
+        <p className="font-semibold">Reference design :</p>
         <a
           href="https://www.figma.com/community/file/1081611224529759785"
           target="_blank"

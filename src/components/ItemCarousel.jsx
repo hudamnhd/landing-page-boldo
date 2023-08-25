@@ -17,11 +17,11 @@ const ItemCarousel = () => {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 772 },
+      breakpoint: { max: 1024, min: 550 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 772, min: 0 },
+      breakpoint: { max: 550, min: 0 },
       items: 1,
     },
   };
@@ -47,7 +47,7 @@ const ItemCarousel = () => {
 
   return (
     <div
-      className="relative"
+      className="relative mx-5"
       onMouseEnter={() => setIsMouseOver(true)}
       onMouseLeave={() => setIsMouseOver(false)}
     >
@@ -64,11 +64,13 @@ const ItemCarousel = () => {
         {feedback.map((feed) => (
           <div
             key={feed.name}
-            className="flex flex-col justify-between space-y-10 rounded-xl bg-white p-8 mx-2 xs:h-[320px] w-fit duration-300 hover:scale-100"
+            className="flex flex-col justify-between space-y-10 rounded-xl bg-white p-7 sm:p-8 mx-2 sm:min-h-[320px] w-fit duration-300 "
           >
-            <p className="text-lg ss:text-xl md:text-2xl">"{feed.content}"</p>
+            <p className="text-xl sm:text-2xl">
+              "{feed.content} Lorem ipsum dolor sit amet"
+            </p>
             <div className="flex items-center space-x-3 xs:space-x-5">
-              <img className="h-12 xs:h-14" src={feed.img} alt={feed.name} />
+              <img className="h-12 sm:h-14" src={feed.img} alt={feed.name} />
               <div className="xs:space-y-2">
                 <h4 className="text-sm xs:text-[16px] font-bold">
                   {feed.name}
