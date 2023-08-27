@@ -2,7 +2,7 @@ import { servicesGroupB } from "../constants";
 
 const ServicesGroupB = () => {
   return (
-    <section className="md:container mx-auto mt-20 px-5 sm:px-10">
+    <section className="md:container mx-auto mt-20 sm:mt-28 px-5 sm:px-10">
       {servicesGroupB.map((service, index) => (
         <div
           key={service.id}

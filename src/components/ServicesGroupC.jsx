@@ -64,7 +64,7 @@ const Accordion = ({ question, answer }) => {
     <div className=" mb-4  border-b border-black pb-4 text-[15px]  xs:text-lg">
       <div
         className={`flex justify-between items-center gap-x-5 cursor-pointer ${
-          isOpen ? "font-semibold" : ""
+          isOpen ? "font-medium" : ""
         }`}
         onClick={toggleAccordion}
       >
