@@ -4,7 +4,6 @@ const ScrollTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    document.title = "Boldo Template";
     const toggleScroll = () => {
       if (window.pageYOffset > 300) {
         setIsVisible(true);

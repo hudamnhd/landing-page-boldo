@@ -28,7 +28,7 @@ function CarouselSize() {
             align: "start",
             loop: true,
           }}
-          className="max-w-[85%] mx-auto"
+          className="xl:max-w-[90%] mx-auto"
         >
           <CarouselContent>
             {[...feedback, ...feedback].map((feed, index) => (
@@ -65,8 +65,8 @@ function CarouselSize() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="sm:flex hidden" />
+          <CarouselNext className="sm:flex hidden" />
         </Carousel>
       </div>
     </section>

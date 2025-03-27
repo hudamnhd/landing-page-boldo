@@ -42,12 +42,12 @@ const CTAFooter = () => {
               <h1 className="text-3xl sm:text-4xl  font-bold">Boldo</h1>
             </div>
 
-            <p className="font-normal text-[#777777] sm:text-[18px] sm:leading-[27px] max-w-md mt-4 mb-4 md:mb-8">
+            <p className="font-normal text-muted-foreground  max-w-md mt-4 mb-4 md:mb-8">
               Social media validation business model canvas graphical user
               interface launch party creative facebook iPad twitter.
             </p>
 
-            <p className="font-normal sm:text-lg text-[#777777] leading-[27px]">
+            <p className="font-normal text-muted-foreground">
               All Rights Reserved.
             </p>
           </div>
@@ -58,14 +58,14 @@ const CTAFooter = () => {
                 key={index}
                 className="flex flex-col ss:my-0 my-4 min-w-[150px]"
               >
-                <h4 className="font-semibold sm:text-[18px] sm:leading-[27px]">
+                <h4 className="font-semibold">
                   {footerlink.title}
                 </h4>
                 <ul className="list-none mt-2 xs:mt-3 sm:mt-4">
                   {footerlink.links.map((link) => (
                     <li
                       key={link.name}
-                      className="font-normal sm:text-[18px] sm:leading-[27px] text-[#777777]  hover:text-black cursor-pointer mb-2 xs:mb-3 sm:mb-4"
+                      className="font-normal text-muted-foreground hover:text-foreground cursor-pointer mb-2 xs:mb-3 sm:mb-4"
                     >
                       {link.name}{" "}
                       <span

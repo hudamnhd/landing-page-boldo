@@ -5,6 +5,7 @@ import {
   CollapsibleTrigger,
 } from "~/components/ui/collapsible";
 import { products } from "../constants";
+
 const Products = () => {
   const ProducstItem = ({ isReverse }: { isReverse?: boolean }) => {
     const data = isReverse ? [...products].reverse() : products;
@@ -18,14 +19,14 @@ const Products = () => {
             <div>
               <img src={product.imgProduct} className="h-auto" alt="" />
               <div className="flex space-x-2 mt-5 mb-2.5">
-                <h4 className="font-bold">{product.type}</h4>
-                <p className="text-gray-500">{product.date}</p>
+                <div className="font-bold">{product.type}</div>
+                <p className="text-muted-foreground">{product.date}</p>
               </div>
-              <p className="max-w-[300px] text-lg">{product.content}</p>
+              <p className="max-w-[300px]">{product.content}</p>
             </div>
 
-            <div className="mt-6 flex items-center space-x-3">
-              <img src={product.img} alt="" />
+            <div className="mt-6 flex items-center space-x-2">
+              <img src={product.img} alt={`profile ${product.person}`} />
               <p>{product.person}</p>
             </div>
           </div>
